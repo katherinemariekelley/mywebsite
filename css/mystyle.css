@@ -1,5 +1,5 @@
 body {
-	background-color: #F5F5F5;
+	background-color: black;
 }
 
 div.parent{
@@ -9,63 +9,106 @@ div.parent{
 	top: 0;
 	bottom: 0;
 	text-align: center;
-	text-anchor: ;
 	overflow-y: scroll;
 }
+
  .navtabs{
-	 margin-left: 20%;
-	 margin-right: 20%;
+	 margin-left: 15%;
+	 margin-right: 15%;
  }
+
+/* this begins the HOME photo design*/
 
 .header{
 	position: relative;
-	height: 100%;
+	display: inline-block;
 	width: 100%;
 }
 
 .homeimage{
-	position: relative;
+	display: block;
 	width: 100%;
 	height: 95%;
 }
 
 .title {
   position: absolute;
-  top: 50%;
-  left: 30%;
-  /*transform: translate(-50%, -50%);*/
-  color: white;
+  top: 40%;
+  left: 50%;
+	right: 0;
+  transform: translate(, -50%);
+  color: #333337;
+	font-size-adjust: 50%;
   text-align: center;
 	line-height: 2.0em;
+	font-weight: bold;
 }
 
 .paragraph1{
-	margin-left:20%;
-	margin-right:20%;
+	font-family: 'Nunito', sans-serif;
+	font-size: 20px;
+	margin-left:15%;
+	margin-right:15%;
 	font-weight: bolder;
+  padding-top: 2.0em;
 }
+
+/* this begins the HOME flexbar design*/
 
  .navsections{
-	 margin-left:20%;
-	 margin-right:20%;
-	 padding-top: 5%;
-	 padding-bottom: 5%
+	 display: flex;
+	 flex-flow: row || wrap;
+	 justify-content: center;
+	 align-items: center;
+	 align-content: space-around;
+	 font-family: 'Nunito', sans-serif;
+	 margin-left:15%;
+	 margin-right:15%;
+	 padding-top: 2%;
  }
 
-.column-left{
-	float: left;
-	width: 33%;
-	font-weight: bold;
+.column{
+	flex-grow: 1;
+	width: 100%;
+	align-self: baseline;
+	margin: 20px;
 }
 
-.column-center{
-	display: inline-block;
-	width: 33%;
-	font-weight: bold;
+.column-image{
+	position: relative;
+	width: 100%;
 }
 
-.column-right{
-	float: right;
-	width: 33%;
-	font-weight: bold;
+.column-title{
+	left: 0;
+	right: 0;
+	transform: translate(, -50%);
+	color: black;
+	text-align: center;
+	font-family: 'Nunito', sans-serif;
+	font-size: 24px;
+	font-weight: lighter;
+	background: white;
+	padding: 10px;
+}
+
+/* this begins the BIO tab design*/
+
+.biophoto{
+	width: 100%;
+	height: 100%;
+}
+
+/* this begins the WORK tab design*/
+
+.workphoto{
+	width: 100%;
+	height: 100%;
+}
+
+/* this begins the TRAVEL tab design*/
+
+.travelphoto{
+	width: 100%;
+	height: 100%;
 }
