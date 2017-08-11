@@ -1,5 +1,5 @@
 body {
-	background-color: black;
+	background-color: #F9F9FA;
 }
 
 div.parent{
@@ -13,10 +13,28 @@ div.parent{
 }
 
  .navtabs{
-	 margin-left: 15%;
-	 margin-right: 15%;
+	 display: flex;
+	 overflow: hidden;
  }
 
+.navtabs a{
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	color: #333337;
+	text-align: center;
+	padding: 8px;
+	text-decoration: none;
+}
+
+.navtabs a:hover{
+	background-color: #F9F9FA;
+	color: #333337;
+}
+
+.navtabs a.active{
+	background-color: #333337;
+	color: white;
+}
 /* this begins the HOME photo design*/
 
 .header{
@@ -33,14 +51,14 @@ div.parent{
 
 .title {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
 	right: 0;
   transform: translate(, -50%);
   color: #333337;
 	font-size-adjust: 50%;
   text-align: center;
-	line-height: 2.0em;
+	line-height: 0.2em;
 	font-weight: bold;
 }
 
@@ -49,7 +67,7 @@ div.parent{
 	font-size: 20px;
 	margin-left:15%;
 	margin-right:15%;
-	font-weight: bolder;
+	font-weight: lighter;
   padding-top: 2.0em;
 }
 
