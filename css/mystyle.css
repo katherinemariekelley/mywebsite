@@ -13,7 +13,6 @@ div.parent{
 }
 
  .navtabs{
-	 display: flex;
 	 overflow: hidden;
  }
 
@@ -21,7 +20,7 @@ div.parent{
 	font-family: 'Nunito', sans-serif;
 	font-size: 16px;
 	color: #333337;
-	text-align: center;
+	float: left;
 	padding: 8px;
 	text-decoration: none;
 }
@@ -35,6 +34,15 @@ div.parent{
 	background-color: #333337;
 	color: white;
 }
+
+/*.tab-content-hide{
+	display: none;
+}
+
+.tab-content-active{
+	display: block;
+}*/
+
 /* this begins the HOME photo design*/
 
 .header{
@@ -59,12 +67,13 @@ div.parent{
 	font-size-adjust: 50%;
   text-align: center;
 	line-height: 0.2em;
-	font-weight: bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .paragraph1{
 	font-family: 'Nunito', sans-serif;
 	font-size: 20px;
+	color: #333337;
 	margin-left:15%;
 	margin-right:15%;
 	font-weight: lighter;
@@ -83,13 +92,16 @@ div.parent{
 	 margin-left:15%;
 	 margin-right:15%;
 	 padding-top: 2%;
+	 text-align: center;
  }
 
 .column{
+	position: relative;
 	flex-grow: 1;
 	width: 100%;
 	align-self: baseline;
 	margin: 20px;
+	text-decoration: none;
 }
 
 .column-image{
@@ -98,35 +110,125 @@ div.parent{
 }
 
 .column-title{
-	left: 0;
-	right: 0;
-	transform: translate(, -50%);
-	color: black;
+	position: absolute;
+	width: 100%;
+	top: 45%;
+	color: white;
 	text-align: center;
 	font-family: 'Nunito', sans-serif;
-	font-size: 24px;
-	font-weight: lighter;
-	background: white;
-	padding: 10px;
+	font-size: 32px;
+	font-weight: bolder;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-decoration: none;
+}
+
+.column-title a{
+	text-decoration: none;
+	color: white;
 }
 
 /* this begins the BIO tab design*/
 
+#bio{
+	padding-top: 2%;
+	margin-left:15%;
+	margin-right:15%;
+}
+
+.bioheader{
+	font-family: 'Nunito', sans-serif;
+	font-size: 40px;
+	color: #333337;
+}
+
 .biophoto{
 	width: 100%;
 	height: 100%;
+	border-style: inset;
+	border-width: thin;
+	border-color: #333337;
 }
 
+.biobody{
+	font-family: 'Nunito', sans-serif;
+	font-size: 14px;
+	color: #333337;
+}
+
+
 /* this begins the WORK tab design*/
+
+#work{
+	padding-top: 2%;
+	margin-left:15%;
+	margin-right:15%;
+}
+
+.workheader{
+	font-family: 'Nunito', sans-serif;
+	font-size: 40px;
+	color: #333337;
+}
 
 .workphoto{
 	width: 100%;
 	height: 100%;
+	border-style: inset;
+	border-width: thin;
+	border-color: #333337;
+}
+
+.workbody{
+	font-family: 'Nunito', sans-serif;
+	font-size: 14px;
+	color: #333337;
 }
 
 /* this begins the TRAVEL tab design*/
+ #travel{
+	 padding-top: 2%;
+   margin-left:15%;
+   margin-right:15%;
+ }
 
-.travelphoto{
-	width: 100%;
+ .travelheader{
+ 	font-family: 'Nunito', sans-serif;
+ 	font-size: 40px;
+ 	color: #333337;
+ }
+
+ .travelbody{
+ 	font-family: 'Nunito', sans-serif;
+ 	font-size: 14px;
+ 	color: #333337;
+ }
+
+ #map{
+	width: auto;
 	height: 100%;
+ }
+
+/* this begins the FOOTER design */
+
+.footer{
+	position: relative;
+	background-color: #CBCBCB;
+	width: 100%;
+	height: 15%;
+	text-align: center;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+}
+
+.emailbox{
+	position: absolute;
+	background: white;
+	height: 30px;
+	width: 70px;
+	left: 50%;
+	margin: 10px;
+}
+
+#copyright{
+	float: left;
 }

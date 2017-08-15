@@ -7,9 +7,10 @@
 
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel ="stylesheet" type = "text/css" href = "css/mystyle.css" />
-<!-- <link rel ="stylesheet" type = "text/css" href = "bootstrap/css/bootstrap.css" /> -->
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Nunito|Quicksand" rel="stylesheet">
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="index.js"></script>
+ <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+ <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 
@@ -17,17 +18,17 @@
 
 <div class="parent">
 
-	<div class = "navtabs">
-			<a class="active" data-toggle="tab" href="#home">HOME</a>
-			<a data-toggle="tab" href="#bio">BIO</a>
-			<a data-toggle="tab" href="#work">WORK</a>
-			<a data-toggle="tab" href="#travel">TRAVEL</a>
-      <a data-toggle="tab" href="#">LINKEDIN</a>
-      <a data-toggle="tab" href="#">INSTAGRAM</a>
-      <a data-toggle="tab" href="#">PINTEREST</a>
-	</div>
+		<nav class = "navtabs fixed">
+			<a class="active" href="#home">HOME</a>
+			<a class="navlink" href="#bio">BIO</a>
+			<a class="navlink" href="#work">WORK</a>
+			<a class="navlink" href="#travel">TRAVEL</a>
+      <a target="_blank" href="https://www.linkedin.com/in/katherine-kelley-29300578/">LINKEDIN</a>
+			<a target="_blank" href="https://github.com/katherinemariekelley">GITHUB</a>
+			<a target="_blank" href="https://www.instagram.com/kathkelley1/">INSTAGRAM</a>
+		</nav>
 
-    <div id="home" class="tab-pane fade in active">
+    <section id="home" class="tab-content-active">
       <div class="header">
          <img class="homeimage" src="img/naples2.jpg">
          <div class= "title">
@@ -41,33 +42,52 @@
       <div class="navsections">
          <div class="column">
 					 <img class="column-image" src="img/lavendarhaze1.jpg">
-      		 <div class="column-title">BIO</div>
+      		 <div class="column-title"><a href="#bio">BIO</a></div>
          </div>
          <div class="column">
 					 <img class="column-image" src="img/chicagoskyline1.jpg">
-					 <div class="column-title"> WORK </div>
+					 <div class="column-title"><a href="#work">WORK</a></div>
 				 </div>
          <div class="column">
 					 <img class="column-image" src="img/pulpitrock.jpg">
-					 <div class="column-title"> TRAVEL </div>
+					 <div class="column-title"><a href="#travel">TRAVEL</a></div>
 				 </div>
       </div>
-    </div>
+    </section>
 
-    <div id="bio" class="tab-pane fade">
+
+    <section id="bio" class="tab-content-hide">
+			<p class="bioheader"> ABOUT ME</p>
       <img class="biophoto" src="img/homeimage.jpg">
-      <p class="biotext"> Something about me</p>
-    </div>
+			<p class="biobody"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus metus sagittis aliquet tempor. Donec a turpis sed quam posuere bibendum ut vel libero. Nulla hendrerit vestibulum accumsan. Pellentesque gravida quis tellus a dapibus. Curabitur cursus congue ex. Sed et nisi non mauris mollis faucibus. Morbi venenatis magna elit, at euismod arcu laoreet sit amet. Nullam ac felis leo. In hac habitasse platea dictumst. Nullam tincidunt enim ut sem cursus malesuada. Donec elementum a ante vitae luctus. Fusce imperdiet maximus neque id placerat. Nam quis odio ligula. Praesent nec dui ornare est vestibulum fermentum non non augue. In sed ultricies sem.
+					Vivamus id odio sed ante aliquam hendrerit. Mauris eu ex porttitor ligula tempus molestie. Aenean placerat rhoncus tortor sit amet faucibus. Sed commodo, elit sit amet scelerisque malesuada, turpis dolor tincidunt massa, non ullamcorper odio tortor eu erat. Etiam posuere vulputate suscipit. Maecenas vitae nibh suscipit, ultrices lorem sit amet, lobortis justo. Sed non lacinia orci, at consectetur risus. In accumsan velit eget consectetur vulputate. Ut mattis est sit amet neque faucibus imperdiet. Praesent congue, nibh non pharetra gravida, justo lacus malesuada libero, volutpat euismod enim est et sem. Pellentesque vel lectus ac nibh vestibulum dapibus.
+			</p>
+    </section>
 
-    <div id="work" class="tab-pane fade">
-			<img class="workphoto" src="img/dubrovnik.jpg">
-      <p class="worktext"> Insert resume here </p>
-    </div>
+    <section id="work" class="tab-content-hide">
+			<p class="workheader"> MY WORK </p>
+      <object width="600" height="800" data="img/kkresume.pdf"></object>
+    </section>
 
-    <div id="travel" class="tab-pane fade">
-		  <img class="travelphoto" src="img/dubrovnik.jpg">
-      <p class="traveltext"> Put cool interactive map heres </p>
-    </div>
+    <section id="travel" class="tab-content-hide">
+		  <p class="travelheader"> TRAVEL </p>
+			<p class="travelbody"> I always have friends and family asking about my most recent trips. So, I thought it would be cool to document them here on my site. Use the interactive map below to explore the world through my photos! </p>
+			<div id='map'>
+				<script>
+  			mapboxgl.accessToken = 'pk.eyJ1Ijoia2VsbGV5azU3NSIsImEiOiJjajZja2wzMHUxcWo3MnduNmJodmp3OWZhIn0.Ef9pAoX1MPI5AaNBUPQP_w';
+  			var map = new mapboxgl.Map({
+    			container: 'map',
+    			style: 'mapbox://styles/mapbox/light-v9'
+  			});
+				</script>
+			</div>
+    </section>
+
+		<div class="footer">
+				<p> Want to get in touch? Email me here: </p>
+				<div class="emailbox"></div>
+				<p id="copyright"> Copyright 2017 by Katherine Kelley</p>
+		</div>
 
  </div>
 
